@@ -1,7 +1,7 @@
 import { http, createConfig } from "wagmi";
 import { mainnet, sepolia, arbitrum } from "wagmi/chains";
 import { coinbaseWallet, injected, walletConnect } from "wagmi/connectors";
-import { defaultWagmiConfig } from "@web3modal/wagmi/react/config";
+// import { defaultWagmiConfig } from "@web3modal/wagmi/react/config";
 
 export const config = createConfig({
   chains: [mainnet, sepolia],
@@ -16,20 +16,20 @@ export const config = createConfig({
   },
 });
 
-const metadata = {
-  name: "Web3Modal",
-  description: "Web3Modal Example",
-  url: "https://web3modal.com", // origin must match your domain & subdomain
-  icons: ["https://avatars.githubusercontent.com/u/37784886"],
-};
+// const metadata = {
+//   name: "Web3Modal",
+//   description: "Web3Modal Example",
+//   url: "https://web3modal.com", // origin must match your domain & subdomain
+//   icons: ["https://avatars.githubusercontent.com/u/37784886"],
+// };
 
-const chains = [mainnet, arbitrum] as const;
-export const configWalletConnect = defaultWagmiConfig({
-  chains,
-  projectId: import.meta.env.VITE_WC_PROJECT_ID,
-  metadata,
-  // ...wagmiOptions, // Optional - Override createConfig parameters
-});
+// const chains = [mainnet, arbitrum] as const;
+// export const configWalletConnect = defaultWagmiConfig({
+//   chains,
+//   projectId: import.meta.env.VITE_WC_PROJECT_ID,
+//   metadata,
+//   // ...wagmiOptions, // Optional - Override createConfig parameters
+// });
 
 declare module "wagmi" {
   interface Register {

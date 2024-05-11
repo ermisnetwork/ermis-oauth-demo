@@ -1,12 +1,12 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Buffer } from "buffer";
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Buffer } from "buffer";
 import { WagmiProvider } from "wagmi";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import { config } from "./wagmi.ts";
 
 import App from "./App.tsx";
-import { config } from "./wagmi.ts";
 
 import "./index.css";
 
